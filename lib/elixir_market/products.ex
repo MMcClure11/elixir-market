@@ -25,4 +25,26 @@ defmodule ElixirMarket.Products do
   """
   @spec list_products() :: any
   def list_products, do: @products
+
+  @doc """
+  Returns a product by its code.
+  If the product is not found, returns `nil`.
+
+  ## Examples
+
+    iex> ElixirMarket.Products.get_product_by_code(:CF1)
+    %Product{code: :CF1, name: "Coffee", price: 11.23}
+  """
+  @spec get_product_by_code(atom | String.t()) :: Product.t() | nil
+  def get_product_by_code(code) when is_binary(code) do
+    try do
+      code |> String.to_existing_atom() |> get_product_by_code()
+    rescue
+      ArgumentError -> nil
+    end
+  end
+
+  def get_product_by_code(code) when is_atom(code) do
+    Enum.find(@products, fn product -> product.code == code end)
+  end
 end
