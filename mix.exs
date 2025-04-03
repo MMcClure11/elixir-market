@@ -9,7 +9,12 @@ defmodule ElixirMarket.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      dialyzer: [
+        plt_add_apps: [:mix, :ex_unit],
+        plt_file: {:no_warn, "priv/plts/dialyzer.plt"},
+        check_plt: true
+      ]
     ]
   end
 
@@ -32,6 +37,7 @@ defmodule ElixirMarket.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
       {:phoenix, "~> 1.7.20"},
       {:phoenix_html, "~> 4.1"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
