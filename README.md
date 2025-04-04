@@ -200,30 +200,6 @@ To add a new pricing rule:
    end
    ```
 
-## Project Structure
-
-```
-lib/
-├── elixir_market/
-│   ├── checkout.ex               # Checkout functionality
-│   ├── interactive_basket.ex     # Interactive basket for IEx
-│   ├── pricing_rule.ex           # Pricing rule behaviour
-│   ├── pricing_rules/            # Individual pricing rules
-│   │   ├── buy_one_get_one_free.ex
-│   │   ├── bulk_strawberry_discount.ex
-│   │   ├── bulk_coffee_discount.ex
-│   └── product.ex                # Product definitions
-test/
-├── checkout_test.exs             # Checkout tests
-├── interactive_basket_test.exs   # Interactive basket tests
-└── pricing_rules/                # Pricing rule tests
-    ├── buy_one_get_one_free_test.exs
-    ├── bulk_strawberry_discount_test.exs
-    ├── bulk_coffee_discount_test.exs
-    ├── coffee_strawberry_combo_test.exs
-    └── default_pricing_test.exs
-```
-
 ## Design Principles
 
 This project follows several key design principles:
