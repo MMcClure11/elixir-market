@@ -204,7 +204,6 @@ To add a new pricing rule:
 
 ```
 lib/
-├── elixir_market.ex              # Main interface
 ├── elixir_market/
 │   ├── checkout.ex               # Checkout functionality
 │   ├── interactive_basket.ex     # Interactive basket for IEx
@@ -215,7 +214,6 @@ lib/
 │   │   ├── bulk_coffee_discount.ex
 │   └── product.ex                # Product definitions
 test/
-├── elixir_market_test.exs        # Main tests
 ├── checkout_test.exs             # Checkout tests
 ├── interactive_basket_test.exs   # Interactive basket tests
 └── pricing_rules/                # Pricing rule tests
