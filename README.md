@@ -200,23 +200,6 @@ To add a new pricing rule:
    end
    ```
 
-## Design Principles
-
-This project follows several key design principles:
-
-1. **Single Responsibility Principle**: Each module has a single, well-defined responsibility.
-2. **Open/Closed Principle**: The system is open for extension (new rules) but closed for modification.
-3. **Dependency Inversion**: High-level modules don't depend on low-level modules; both depend on abstractions.
-4. **Test-Driven Development**: Tests were written before implementation to guide the design.
-5. **Functional Programming**: Pure functions and immutable data structures are used where possible.
-
-## Conclusion
-
-This checkout system demonstrates a flexible, extensible design that can easily
-accommodate changing business requirements. The modular architecture and
-separation of concerns make it easy to add new features or modify existing ones
-without affecting the rest of the system.
-
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
